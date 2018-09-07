@@ -4,18 +4,13 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { AppComponent, DialogOverviewExampleDialog } from './app.component';
-import {
-  MatButtonModule, MatDialogModule
-} from '@angular/material';
+import { MatButtonModule, MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DialogOverviewExampleDialog
-  ],  entryComponents: [
-    DialogOverviewExampleDialog],
+  declarations: [AppComponent, DialogOverviewExampleDialog],
+  entryComponents: [DialogOverviewExampleDialog],
   imports: [
     BrowserModule,
     FormsModule,
@@ -23,10 +18,10 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatDialogModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule
   ],
   exports: [MatButtonModule, MatDialogModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
