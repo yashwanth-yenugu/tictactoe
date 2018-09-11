@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+<<<<<<< HEAD
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
@@ -6,11 +7,15 @@ import { Inject } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 import { Routes } from '@angular/router';
 import { Router } from '@angular/router';
+=======
+
+>>>>>>> 687d59058dab6bdeca535dbde15a19fabd86e39a
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+<<<<<<< HEAD
 export class AppComponent implements OnInit, AfterViewInit {
   allUsers: {}[];
   showField = false;
@@ -73,4 +78,9 @@ export class DialogOverviewExampleDialog {
     this.dialogRef.close();
   }
 
+=======
+export class AppComponent implements OnInit {
+  constructor() {}
+  ngOnInit(): void {}
+>>>>>>> 687d59058dab6bdeca535dbde15a19fabd86e39a
 }

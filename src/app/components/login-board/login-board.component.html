@@ -1,0 +1,20 @@
+
+
+<mat-card>
+  <div *ngIf="!showField">
+    <label for="usr">User Name</label>
+    <input type="text" [(ngModel)]="user" class="form-control" id="usr">
+    <button mat-raised-button (click)="showInput()" color="primary"> Play</button>
+  </div>
+</mat-card>
+
+<!-- <div *ngIf="showField">
+  Showing Data
+  <span *ngFor="let users of allUsers">
+    <p>
+      {{users.user}}
+    </p>
+  </span>
+  <p>User: {{user}}</p>
+  <p>RandomId: {{randomId}}</p>
+</div> -->
