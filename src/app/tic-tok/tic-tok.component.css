@@ -1,0 +1,6 @@
+.classBox{
+    border: 1px solid black;
+padding: 18px;
+cursor: pointer;
+height: 200px;
+}

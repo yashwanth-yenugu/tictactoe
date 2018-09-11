@@ -1,0 +1,11 @@
+.sampleOverLay{
+    opacity:  1 !important;
+    transition: width .35s ease;
+}
+.test{
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.test:hover{
+opacity: 1
+}

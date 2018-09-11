@@ -3,6 +3,9 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Inject } from '@angular/core';
+import { Route } from '@angular/compiler/src/core';
+import { Routes } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,13 +20,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   animal: any;
   itemValue = '';
   items: Observable<any[]>;
-  constructor(public db: AngularFireDatabase, public dialog: MatDialog) {
+  constructor(public db: AngularFireDatabase, public dialog: MatDialog, private router: Router) {
     console.log('sa', db.list('users').valueChanges().subscribe(data => {
       console.log('sad', data);
       this.allUsers = data;
     }));
   }
   ngOnInit(): void {
+    this.router.navigateByUrl('home');
   }
   ngAfterViewInit(): void {
     // this.openDialog();
@@ -31,7 +35,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   showInput() {
     this.showField = true;
     this.randomId = Math.floor((Math.random() * 100000) + 1);
+    localStorage.setItem('localUser', JSON.stringify({'id': this.randomId, 'user': this.user}));
     this.db.list('users').push({user: this.user, randomId:  this.randomId});
+    this.router.navigateByUrl('usersList');
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {

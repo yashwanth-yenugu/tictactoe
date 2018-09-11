@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
+
+    </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ">
+          <form [formGroup]="ticTokFor">
+                  <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(1, myNumber)">
+                          <img  *ngIf="imagesArray[1]" src="{{imagesArray[1].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(2, myNumber)">
+                            <img *ngIf="imagesArray[2]" src="{{imagesArray[2].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42">      
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(3, myNumber)">
+                            <img *ngIf="imagesArray[3]" src="{{imagesArray[3].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                          </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(4, myNumber)">
+                          <img *ngIf="imagesArray[4]" src="{{imagesArray[4].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42">      
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(5, myNumber)">
+                            <img *ngIf="imagesArray[5]" src="{{imagesArray[5].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(6, myNumber)">
+                            <img *ngIf="imagesArray[6]" src="{{imagesArray[6].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                        </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(7, myNumber)">
+                          <img *ngIf="imagesArray[7]" src="{{imagesArray[7].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                      </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(8, myNumber)">
+                            <img *ngIf="imagesArray[8]" src="{{imagesArray[8].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 classBox" (click)="updateTheDb(9, myNumber)">
+                            <img *ngIf="imagesArray[9]" src="{{imagesArray[9].imageSrc}}" style="padding-left: 25px;height: 160px;width: auto;" height="42" width="42"> 
+                        </div>
+                  </div>
+          </form>
+        </div>
+  </div>
+</div>
